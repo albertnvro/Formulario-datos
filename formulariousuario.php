@@ -78,5 +78,6 @@ function registrar_mi_shortcode() {
     add_shortcode('formulario_usuario', 'mi_formulario_de_usuario_shortcode');
 }
 
-add_action('show_user_profile')
+add_action('show_user_profile', 'mi_formulario_de_usuario_shortcode' )
+add_action('edit_profile_user_update', 'mi_formulario_de_usuario_shortcode')
 add_action('init', 'registrar_mi_shortcode');
